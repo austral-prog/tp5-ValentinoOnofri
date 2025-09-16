@@ -19,18 +19,36 @@ def roots(a, b, c):
     return raices
     
 def value_y(a, b, c, x):
-    if a != 0:
-        valor_y = a * (x **2) + b * x + c
-    elif a == 0:
-        valor_y = b * x + c
+    valor_y = a * (x **2) + b * x + c
     return valor_y
 
 def to_string(a, b, c):
-    string = f"f(x) = {a} * X^2 + {b} * X + {c}"
-    return string
+    result = " "
+    if a != 0: 
+        result = f"f(x) = {a} * X^2"
+    if b != 0:
+        if result == " ":
+            result = f"f(x) = {b} * X"
+        else:
+            result = result + f" + {b} * X"
+    if c != 0:
+        if result == " ":
+            result = f"f(x) = {c}"
+        else:
+            result = result + f" + {c}"
+    return result
 
-def derivation(a, b, c):
+def derivation(a, b, c): #Arreglar
     derivada_cuadrado = 2 * a
     derivada_termino_lineal = b
-    derivada = f"f'(x) = {derivada_cuadrado} * X + {derivada_termino_lineal}"
-    return derivada
+    result = ""
+    if a != 0:
+        result = f"f'(x) = {derivada_cuadrado} * X"
+    if b != 0:
+        if result == "":
+            result = f"f'(x) = {derivada_termino_lineal}"
+        else:
+            result = result + f" + {derivada_termino_lineal}"
+    if a == 0 and b == 0:
+        result = f"f'(x) = 0"
+    return result
