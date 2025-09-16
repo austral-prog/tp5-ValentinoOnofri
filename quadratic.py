@@ -38,7 +38,7 @@ def to_string(a, b, c):
             result = result + f" + {c}"
     return result
 
-def derivation(a, b, c): #Arreglar
+def derivation(a, b, c):
     derivada_cuadrado = 2 * a
     derivada_termino_lineal = b
     result = ""
