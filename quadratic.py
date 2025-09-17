@@ -1,8 +1,8 @@
 # Replace the "ANSWER HERE" for your answer
-a = float(input("Ingrese el valor del coeficiente A: "))
-b = float(input("Ingrese el valor del coeficiente B: "))
-c = float(input("Ingrese el valor del coeficiente C: "))
-x = float(input("Ingrese el valor de la incognita X: "))
+# a = float(input("Ingrese el valor del coeficiente A: "))
+# b = float(input("Ingrese el valor del coeficiente B: "))
+# c = float(input("Ingrese el valor del coeficiente C: "))
+# x = float(input("Ingrese el valor de la incognita X: "))
 
 def roots(a, b, c):
     discriminante = (b**2 - 4*a*c)
